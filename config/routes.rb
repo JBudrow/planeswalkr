@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   delete "/login", to: "sessions#destroy"
 
   resources :cardsets, only: [:new, :create, :index, :show]
+<<<<<<< HEAD
+  resources :deck_cards
+=======
+  resources :decks 
+>>>>>>> 7f106295d9ef946902853a8132e2fbc236f23651
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

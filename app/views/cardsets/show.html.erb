@@ -2,7 +2,7 @@
 
 
 
-<ul class="card-images">
+<ul class="valign-wrapper container card-images">
   <% @cards.each do |card| %>
     <li class="responsive-img col s4">
         <%= image_tag(card.image_url) %>
@@ -11,7 +11,3 @@
 </ul>
 
 <%= paginate @cards %>
-
-<%= link_to("Homepage", root_path) %>
-
-Cool. Cool cool cool.
