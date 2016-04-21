@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20160420191319) do
+ActiveRecord::Schema.define(version: 20160420191932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160420191319) do
     t.text     "colors",                      array: true
     t.integer  "subtypes",                    array: true
     t.text     "supertypes",                  array: true
+    t.integer  "multiverse_id"
   end
 
   create_table "deck_cards", force: :cascade do |t|
