@@ -1,1 +1,7 @@
-<h1>SHIT</h1>
+<small>Decks</small>
+
+<%= render partial: 'form', locals: { deck: Deck.new } %>
+
+<% @decks.each do |deck| %>
+  <%= link_to "#{deck.title}", user_deck_path(current_user.id, deck.id) %>
+<% end %>
