@@ -1,9 +1,5 @@
 <%= @deck.title %>
 
-<ul class="valign-wrapper container card-images">
   <% @deck.cards.each do |card| %>
-    <li class="responsive-img col s4">
-        <%= image_tag(card.image_url) %>
-    </li>
+        <%= image_tag(card.name) %>
   <% end %>
-</ul>

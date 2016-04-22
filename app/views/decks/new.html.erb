@@ -1,9 +1,3 @@
+<small>New Deck</small>
 
-<h1>New Deck</h1>
-
-<%= form_for([current_user, @deck]) do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.button "Submit" %>
-<% end %>
+<%= render partial: 'form', locals: { deck: @deck }
