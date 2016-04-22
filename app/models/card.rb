@@ -1,5 +1,8 @@
 class Card < ActiveRecord::Base
   belongs_to :card_set
+  has_many :decks, through: :deck_cards
+  has_many :deck_cards
+
   validates_presence_of :name, :multiverse_id, :type, :card_set_id
   validates :multiverse_id, uniqueness: true
 
